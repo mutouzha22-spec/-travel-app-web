@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #FFD6E7 0%, #C8DFFF 50%, #D0F0FF 100%);
+    overflow: hidden;
+  }
+  canvas { display: block; touch-action: none; user-select: none; }
+  #city-label {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.92);
+    border: 2px solid #FF8FAB;
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6B8A;
+    display: none;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(255,143,171,0.3);
+  }
+  #hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.7);
+    border-radius: 16px;
+    padding: 6px 18px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #888;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<div id="city-label"></div>
+<div id="hint">拖动旋转地球 · 点击标记进入城市</div>
+
+<script src="three.min.js"></script>
+<script>
+const cities = [
+  { name: '东京',  lat: 35.68,  lon: 139.69, color: 0xFF8FAB },
+  { name: '大阪',  lat: 34.69,  lon: 135.50, color: 0xFFB347 },
+  { name: '北海道',lat: 43.06,  lon: 141.35, color: 0xFF6B9D },
+  { name: '悉尼',  lat: -33.87, lon: 151.21, color: 0x72C8F0 },
+  { name: '墨尔本',lat: -37.81, lon: 144.96, color: 0x98D8C8 },
+  { name: '成都',  lat: 30.57,  lon: 104.07, color: 0xC89AE8 },
+  { name: '云南',  lat: 25.05,  lon: 102.71, color: 0xF0BF80 },
+];
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 6.0;
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setClearColor(0x000000, 0);
+document.body.appendChild(renderer.domElement);
+
+// 灯光
+const ambient = new THREE.AmbientLight(0xffffff, 0.9);
+scene.add(ambient);
+const sun = new THREE.DirectionalLight(0xFFF0E8, 1.0);
+sun.position.set(4, 2, 4);
+scene.add(sun);
+const rimLight = new THREE.DirectionalLight(0xD0E8FF, 0.4);
+rimLight.position.set(-3, 0, -2);
+scene.add(rimLight);
+
+// 地球
+const earthGeo = new THREE.SphereGeometry(1, 64, 64);
+const earthMat = new THREE.MeshPhongMaterial({
+  color: 0x4EB8F0,
+  specular: 0xCCEEFF,
+  shininess: 40,
+  emissive: 0x0A3050,
+  emissiveIntensity: 0.08,
+});
+const earth = new THREE.Mesh(earthGeo, earthMat);
+earth.rotation.y = 2.4;
+scene.add(earth);
+
+// 大气层光晕
+const atmGeo = new THREE.SphereGeometry(1.06, 64, 64);
+const atmMat = new THREE.MeshPhongMaterial({
+  color: 0xA8D8FF,
+  transparent: true,
+  opacity: 0.12,
+  side: THREE.BackSide,
+});
+const atm = new THREE.Mesh(atmGeo, atmMat);
+scene.add(atm);
+
+// 坐标转换
+function latLonToVec3(lat, lon, r) {
+  const phi = (90 - lat) * Math.PI / 180;
+  const theta = (lon + 180) * Math.PI / 180;
+  return new THREE.Vector3(
+    -r * Math.sin(phi) * Math.cos(theta),
+     r * Math.cos(phi),
+     r * Math.sin(phi) * Math.sin(theta)
+  );
+}
+
+// 城市标记
+const markerMeshes = [];
+const markerGeo = new THREE.SphereGeometry(0.028, 16, 16);
+
+cities.forEach(city => {
+  const mat = new THREE.MeshPhongMaterial({
+    color: city.color,
+    emissive: city.color,
+    emissiveIntensity: 0.6,
+    shininess: 100,
+  });
+  const marker = new THREE.Mesh(markerGeo, mat);
+  const pos = latLonToVec3(city.lat, city.lon, 1.015);
+  marker.position.copy(pos);
+  marker.userData.cityName = city.name;
+  earth.add(marker);
+  markerMeshes.push(marker);
+
+  // 外圈光晕
+  const ringGeo = new THREE.RingGeometry(0.034, 0.052, 20);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color: city.color,
+    transparent: true,
+    opacity: 0.55,
+    side: THREE.DoubleSide,
+  });
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.position.copy(pos);
+  const normal = pos.clone().normalize();
+  const quat = new THREE.Quaternion().setFromUnitVectors(
+    new THREE.Vector3(0, 0, 1), normal
+  );
+  ring.setRotationFromQuaternion(quat);
+  earth.add(ring);
+});
+
+// 背景星星（固定不转动）
+const starGeo = new THREE.BufferGeometry();
+const starPos = [];
+for (let i = 0; i < 300; i++) {
+  const r = 8 + Math.random() * 4;
+  const theta = Math.random() * Math.PI * 2;
+  const phi = Math.acos(2 * Math.random() - 1);
+  starPos.push(
+    r * Math.sin(phi) * Math.cos(theta),
+    r * Math.sin(phi) * Math.sin(theta),
+    r * Math.cos(phi)
+  );
+}
+starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPos, 3));
+const starMat = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 0.06, transparent: true, opacity: 0.7 });
+const stars = new THREE.Points(starGeo, starMat);
+scene.add(stars);
+
+// 射线检测
+const raycaster = new THREE.Raycaster();
+raycaster.params.Points.threshold = 0.05;
+const mouse = new THREE.Vector2();
+const label = document.getElementById('city-label');
+let labelTimer = null;
+
+function showLabel(name) {
+  label.textContent = name;
+  label.style.display = 'block';
+  if (labelTimer) clearTimeout(labelTimer);
+  labelTimer = setTimeout(() => { label.style.display = 'none'; }, 2500);
+}
+
+// 动画循环
+let autoRotate = true;
+let stopAutoTimer = null;
+let dragging = false;
+let velX = 0, velY = 0;
+
+// Flutter 通过 JS 调用这些函数来控制旋转
+window.flutterDragStart = function() {
+  autoRotate = false;
+  dragging = true;
+  velX = 0; velY = 0;
+  if (stopAutoTimer) clearTimeout(stopAutoTimer);
+};
+window.flutterDragUpdate = function(dx, dy) {
+  dx = parseFloat(dx); dy = parseFloat(dy);
+  earth.rotation.y += dx * 0.006;
+  earth.rotation.x += dy * 0.006;
+  velY = dx * 0.004;
+  velX = dy * 0.004;
+  label.textContent = 'dx=' + dx.toFixed(1);
+  label.style.display = 'block';
+};
+window.flutterDragEnd = function() {
+  dragging = false;
+  stopAutoTimer = setTimeout(() => { autoRotate = true; }, 3000);
+};
+window.flutterTap = function(x, y) {
+  mouse.x = (x / window.innerWidth) * 2 - 1;
+  mouse.y = -(y / window.innerHeight) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(markerMeshes);
+  if (hits.length > 0) {
+    const name = hits[0].object.userData.cityName;
+    showLabel(name);
+    if (window.TravelApp) window.TravelApp.postMessage(name);
+  }
+};
+
+// 浏览器直接测试时保留鼠标事件
+(function() {
+  let prevX = 0, prevY = 0, moved = false;
+  renderer.domElement.addEventListener('mousedown', e => {
+    prevX = e.clientX; prevY = e.clientY; moved = false;
+    window.flutterDragStart();
+  });
+  renderer.domElement.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    moved = true;
+    window.flutterDragUpdate(e.clientX - prevX, e.clientY - prevY);
+    prevX = e.clientX; prevY = e.clientY;
+  });
+  renderer.domElement.addEventListener('mouseup', e => {
+    window.flutterDragEnd();
+    if (!moved) window.flutterTap(e.clientX, e.clientY);
+  });
+})();
+
+function animate() {
+  requestAnimationFrame(animate);
+  if (autoRotate) {
+    earth.rotation.y += 0.0025;
+  } else if (!dragging) {
+    velX *= 0.92;
+    velY *= 0.92;
+    earth.rotation.x += velX;
+    earth.rotation.y += velY;
+  }
+  atm.rotation.copy(earth.rotation);
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html>
