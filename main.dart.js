@@ -83480,15 +83480,18 @@ n.x=r*0.92
 n.r=B.c.cD(s,-0.6,0.6)}}},
 $S:0}
 A.ajX.prototype={
-$0(){var s,r=this.a,q=this.b,p=q.a,o=p.a
-r.f=r.f+o*0.03
-p=p.b
-s=r.r+p*0.03
-r.r=s
-r.r=B.c.cD(s,-0.6,0.6)
-r.w=o*0.022
-r.x=p*0.022
-r.z=B.c.cD(r.Q*q.d,0.5,3.75)},
+$0(){var s,r,q,p=this.a,o=this.b,n=p.z=B.c.cD(p.Q*o.d,0.5,3.75)
+if(o.w<2){s=0.03/n
+r=0.022/n
+o=o.a
+n=o.a
+p.f=p.f+n*s
+o=o.b
+q=p.r+o*s
+p.r=q
+p.r=B.c.cD(q,-0.6,0.6)
+p.w=n*r
+p.x=o*r}else p.x=p.w=0},
 $S:0}
 A.ak3.prototype={
 $0(){var s,r=this.a
@@ -83858,41 +83861,28 @@ e=j.d
 if(e!=null)f.dl(e)}}a.fj(j,l)
 for(c=k.length,h=0;h<k.length;k.length===c||(0,A.t)(k),++h)a.fj(k[h],n)
 for(c=d.f,s=c.length,h=0;h<c.length;c.length===s||(0,A.t)(c),++h)d.a48(a,c[h],b,a0,a1,r,q,p,o,m)},
-acz(a1,a2,a3,a4,a5,a6,a7,a8){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0=a1.length/3|0
-if(a0<3)return null
-s=new Float64Array(a0)
-r=new Float64Array(a0)
-q=new Float64Array(a0)
-for(p=0;p<a0;++p){o=p*3
-n=a1[o]
-m=a1[o+1]
-l=a1[o+2]
-k=-n*a6+l*a5
-s[p]=n*a5+l*a6
-r[p]=m*a7-k*a8
-q[p]=m*a8+k*a7}j=A.c([],t.yv)
-for(p=0;p<a0;p=i){i=p+1
-h=i%a0
-if(q[p]>0)j.push(new A.i(a2+s[p]*a4,a3-r[p]*a4))
-o=q[p]
-g=q[h]
-if(o>0!==g>0){f=o/(o-g)
-o=s[p]
-e=o+(s[h]-o)*f
-o=r[p]
-d=o+(r[h]-o)*f
-c=Math.sqrt(e*e+d*d)
-if(c>0.000001){e/=c
-d/=c}j.push(new A.i(a2+e*a4,a3-d*a4))}}if(j.length<3)return null
-b=A.bE($.a0().r)
-o=j[0]
-b.ai(new A.e7(o.a,o.b))
-for(o=b.e,p=1;p<j.length;++p){g=j[p]
+acz(a,b,c,d,a0,a1,a2,a3){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e=a.length/3|0
+if(e<3)return null
+s=A.c([],t.yv)
+for(r=0,q=0;q<e;++q){p=q*3
+o=a[p]
+n=a[p+1]
+m=a[p+2]
+l=o*a0+m*a1
+k=-o*a1+m*a0
+j=n*a2-k*a3
+if(n*a3+k*a2>0){++r
+s.push(new A.i(b+l*d,c-j*d))}else{i=Math.sqrt(l*l+j*j)
+if(i>0.000001)s.push(new A.i(b+l/i*d,c-j/i*d))}}if(r===0||s.length<3)return null
+h=A.bE($.a0().r)
+p=s[0]
+h.ai(new A.e7(p.a,p.b))
+for(p=h.e,q=1;q<s.length;++q){g=s[q]
 g=new A.bZ(g.a,g.b)
-o.push(g)
-a=b.d
-if(a!=null)g.dl(a)}b.ai(new A.kd())
-return b},
+p.push(g)
+f=h.d
+if(f!=null)g.dl(f)}h.ai(new A.kd())
+return h},
 a48(a,b,c,d,e,f,a0,a1,a2,a3){var s,r,q,p,o,n,m,l,k,j,i,h=b.length/3|0,g=A.bE($.a0().r)
 for(s=g.e,r=!1,q=0;q<h;++q){p=q*3
 o=b[p]
