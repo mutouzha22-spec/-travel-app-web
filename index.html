@@ -43,7 +43,7 @@
   </style>
 </head>
 <body>
-  <audio id="travel-bgm" preload="auto" loop src="assets/assets/Kawaii_AI_song.mp3" hidden></audio>
+  <audio id="travel-bgm" preload="none" loop src="assets/assets/Kawaii_AI_song.mp3" hidden></audio>
   <audio id="travel-type-1" preload="auto" src="assets/assets/audio/monkey_type_mobile_1.wav" hidden></audio>
   <audio id="travel-type-2" preload="auto" src="assets/assets/audio/monkey_type_mobile_2.wav" hidden></audio>
   <audio id="travel-type-3" preload="auto" src="assets/assets/audio/monkey_type_mobile_3.wav" hidden></audio>
@@ -68,18 +68,17 @@
       };
 
       const unlockAudio = () => {
+        if (unlocked) return;
         document.documentElement.dataset.audioUnlocked = 'true';
-        if (!unlocked) {
-          unlocked = true;
-          typeSounds.forEach((sound) => {
-            sound.currentTime = 0;
-            sound.volume = 0.01;
-            sound.addEventListener('ended', () => sound.volume = 0.78, {
-              once: true,
-            });
-            safePlay(sound);
+        unlocked = true;
+        typeSounds.forEach((sound) => {
+          sound.currentTime = 0;
+          sound.volume = 0.01;
+          sound.addEventListener('ended', () => sound.volume = 0.78, {
+            once: true,
           });
-        }
+          safePlay(sound);
+        });
         safePlay(music);
       };
 
