@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 1,
+  "albums": [
+    {
+      "id": "builtin-tokyo",
+      "slug": "tokyo",
+      "name": "东京",
+      "dateLabel": "2024/06",
+      "photoCount": 21,
+      "latitude": 35.6762,
+      "longitude": 139.6503,
+      "color": "#F4ADCF",
+      "photos": [
+        {
+          "id": "tokyo_001",
+          "order": 1,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-16 130707.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_002",
+          "order": 2,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-16 131415.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_003",
+          "order": 3,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-16 131752.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_004",
+          "order": 4,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-16 132314.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_005",
+          "order": 5,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 114412.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_006",
+          "order": 6,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 120422.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_007",
+          "order": 7,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 121038.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_008",
+          "order": 8,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 125848.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_009",
+          "order": 9,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 130702.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_010",
+          "order": 10,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 131145.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_011",
+          "order": 11,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 131356.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_012",
+          "order": 12,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 131904.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_013",
+          "order": 13,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-23 231024.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_014",
+          "order": 14,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-28 211652.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_015",
+          "order": 15,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-28 211959.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_016",
+          "order": 16,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-28 212729.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_017",
+          "order": 17,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-28 214720.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_018",
+          "order": 18,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-28 214806.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_019",
+          "order": 19,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-29 092132.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_020",
+          "order": 20,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-29 161137.webp",
+          "aspectRatio": 0.460938,
+          "caption": ""
+        },
+        {
+          "id": "tokyo_021",
+          "order": 21,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202406东京/2024-06-29 164501.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "builtin-osaka",
+      "slug": "osaka",
+      "name": "大阪",
+      "dateLabel": "2025/09",
+      "photoCount": 11,
+      "latitude": 34.6937,
+      "longitude": 135.5023,
+      "color": "#FFD2C2",
+      "photos": [
+        {
+          "id": "osaka_001",
+          "order": 1,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/1.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_002",
+          "order": 2,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 084959.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_003",
+          "order": 3,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 085425.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "osaka_004",
+          "order": 4,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 085444.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_005",
+          "order": 5,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 085528.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_006",
+          "order": 6,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 085547.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_007",
+          "order": 7,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 085839.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_008",
+          "order": 8,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 085924.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "osaka_009",
+          "order": 9,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 090151.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_010",
+          "order": 10,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 090412.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "osaka_011",
+          "order": 11,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202509大阪/2026-08-09 090441.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "builtin-jiuzhaigou",
+      "slug": "jiuzhaigou",
+      "name": "九寨沟",
+      "dateLabel": "2025/10/21",
+      "photoCount": 15,
+      "latitude": 33.26,
+      "longitude": 103.92,
+      "color": "#DDF3B8",
+      "parentRegion": "四川",
+      "regionId": "cn-51",
+      "regionName": "四川省",
+      "regionLatitude": 30.5728,
+      "regionLongitude": 104.0668,
+      "regionColor": "#DDF3B8",
+      "photos": [
+        {
+          "id": "jiuzhaigou_001",
+          "order": 1,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/6eee7a509777d67a49fec26af1d285a8_0.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_002",
+          "order": 2,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/19ad57ef8ce230733c7f4f8edef8b55c_0.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_003",
+          "order": 3,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/65bb731f957b6169747342eae561546c_0.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_004",
+          "order": 4,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/80c81d50a6c34c08e093604dfbcc7b5f_720.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_005",
+          "order": 5,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/995e179f0064777bc14d34aab96fda88_0.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_006",
+          "order": 6,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/2239ffd9071c688a2a7bab8b000589ab_0.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_007",
+          "order": 7,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/b9356d1fcfd4a5a2d6be982ae5c48bf7_0.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_008",
+          "order": 8,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/DSC05073.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_009",
+          "order": 9,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/DSC05081.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_010",
+          "order": 10,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/DSC05087.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_011",
+          "order": 11,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/DSC05134.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_012",
+          "order": 12,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/DSC05160.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_013",
+          "order": 13,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/f5dbe8fb36da6b4e502647b805336d58_0.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_014",
+          "order": 14,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/fb17d41d7a419c699ddd3fbca070b27e_720.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "jiuzhaigou_015",
+          "order": 15,
+          "thumbnailPath": "assets/photo/cloud_thumbs/20251021九寨沟/fdefba1abefc0c942636e9506a58f922_0.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "builtin-hokkaido",
+      "slug": "hokkaido",
+      "name": "北海道",
+      "dateLabel": "2026/03",
+      "photoCount": 14,
+      "latitude": 43.2203,
+      "longitude": 142.8635,
+      "color": "#FFFABF",
+      "photos": [
+        {
+          "id": "hokkaido_001",
+          "order": 1,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/2026-02-24 104318.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "hokkaido_002",
+          "order": 2,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/2026-02-27 132009.webp",
+          "aspectRatio": 0.5625,
+          "caption": "逮捕！"
+        },
+        {
+          "id": "hokkaido_003",
+          "order": 3,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/2026-02-27 201724.webp",
+          "aspectRatio": 1.777778,
+          "caption": "想吃香蕉..."
+        },
+        {
+          "id": "hokkaido_004",
+          "order": 4,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/2026-02-28 162801.webp",
+          "aspectRatio": 1.777778,
+          "caption": "雪景温泉，感觉很普通..."
+        },
+        {
+          "id": "hokkaido_005",
+          "order": 5,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/2026-03-01 081747.webp",
+          "aspectRatio": 0.5625,
+          "caption": "旭川站前"
+        },
+        {
+          "id": "hokkaido_006",
+          "order": 6,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/2026-03-02 105613.webp",
+          "aspectRatio": 1.777778,
+          "caption": "富士山一样的冰淇淋"
+        },
+        {
+          "id": "hokkaido_007",
+          "order": 7,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/微信图片_20260718150115_104_205.webp",
+          "aspectRatio": 1.498829,
+          "caption": "小鸭子制作中"
+        },
+        {
+          "id": "hokkaido_008",
+          "order": 8,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/微信图片_20260718151625_107_205.webp",
+          "aspectRatio": 0.667188,
+          "caption": "S~A~K~U~R~A~"
+        },
+        {
+          "id": "hokkaido_009",
+          "order": 9,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/微信图片_20260718151639_108_205.webp",
+          "aspectRatio": 1.333333,
+          "caption": "遇到了东京早樱"
+        },
+        {
+          "id": "hokkaido_010",
+          "order": 10,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/DSC05577.webp",
+          "aspectRatio": 0.667188,
+          "caption": "鹿：专心吃草"
+        },
+        {
+          "id": "hokkaido_011",
+          "order": 11,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/DSC05970.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "hokkaido_012",
+          "order": 12,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/DSC06040.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        },
+        {
+          "id": "hokkaido_013",
+          "order": 13,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/IMG_20260224_115343.webp",
+          "aspectRatio": 0.75,
+          "caption": "这里的水烧开了"
+        },
+        {
+          "id": "hokkaido_014",
+          "order": 14,
+          "thumbnailPath": "assets/photo/app/202603北海道/thumbs/Videoframe_20260224_211953_com.huawei.photos.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "builtin-melbourne",
+      "slug": "melbourne",
+      "name": "墨尔本",
+      "dateLabel": "2026/04",
+      "photoCount": 8,
+      "latitude": -37.8136,
+      "longitude": 144.9631,
+      "color": "#BFC4FF",
+      "photos": [
+        {
+          "id": "melbourne_001",
+          "order": 1,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/2026-08-09 092507.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "melbourne_002",
+          "order": 2,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/2026-08-09 092700.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "melbourne_003",
+          "order": 3,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/2026-08-09 092726.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "melbourne_004",
+          "order": 4,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/2026-08-09 092845.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "melbourne_005",
+          "order": 5,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/2026-08-09 092920.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "melbourne_006",
+          "order": 6,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/2026-08-09 092943.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "melbourne_007",
+          "order": 7,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/2026-08-09 093020.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "melbourne_008",
+          "order": 8,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604墨尔本/DSC06651.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "builtin-sydney",
+      "slug": "sydney",
+      "name": "悉尼",
+      "dateLabel": "2026/04",
+      "photoCount": 14,
+      "latitude": -33.8688,
+      "longitude": 151.2093,
+      "color": "#B2F9E7",
+      "photos": [
+        {
+          "id": "sydney_001",
+          "order": 1,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-04-16_072013 (1).webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "sydney_002",
+          "order": 2,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-04-16_074303 (1).webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "sydney_003",
+          "order": 3,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-04-16_085528 (1).webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "sydney_004",
+          "order": 4,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-08-09 091734.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "sydney_005",
+          "order": 5,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-08-09 091946.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "sydney_006",
+          "order": 6,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-08-09 092017.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "sydney_007",
+          "order": 7,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-08-09 092139.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "sydney_008",
+          "order": 8,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-08-09 092224.webp",
+          "aspectRatio": 0.5625,
+          "caption": ""
+        },
+        {
+          "id": "sydney_009",
+          "order": 9,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/2026-08-09 092338.webp",
+          "aspectRatio": 1.777778,
+          "caption": ""
+        },
+        {
+          "id": "sydney_010",
+          "order": 10,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/DSC06368.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "sydney_011",
+          "order": 11,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/DSC06373.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "sydney_012",
+          "order": 12,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/DSC06377.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "sydney_013",
+          "order": 13,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/DSC06397.webp",
+          "aspectRatio": 1.498829,
+          "caption": ""
+        },
+        {
+          "id": "sydney_014",
+          "order": 14,
+          "thumbnailPath": "assets/photo/cloud_thumbs/202604悉尼/DSC06543.webp",
+          "aspectRatio": 0.667188,
+          "caption": ""
+        }
+      ]
+    }
+  ]
+}
