@@ -1,11 +1,11 @@
 {
-    "name": "travel_app",
-    "short_name": "travel_app",
+    "name": "拾星",
+    "short_name": "拾星",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#40A3F1",
     "theme_color": "#40A3F1",
-    "description": "A new Flutter project.",
+    "description": "拾起流星里的旅行记忆。",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
