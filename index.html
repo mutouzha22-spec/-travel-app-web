@@ -47,11 +47,18 @@
   <audio id="travel-type-1" preload="auto" src="assets/assets/audio/monkey_type_mobile_1.wav" hidden></audio>
   <audio id="travel-type-2" preload="auto" src="assets/assets/audio/monkey_type_mobile_2.wav" hidden></audio>
   <audio id="travel-type-3" preload="auto" src="assets/assets/audio/monkey_type_mobile_3.wav" hidden></audio>
+  <audio id="travel-banana-1" preload="auto" src="assets/assets/audio/banana_catch.wav" hidden></audio>
+  <audio id="travel-banana-2" preload="auto" src="assets/assets/audio/banana_catch.wav" hidden></audio>
+  <audio id="travel-banana-3" preload="auto" src="assets/assets/audio/banana_catch.wav" hidden></audio>
+  <audio id="travel-banana-4" preload="auto" src="assets/assets/audio/banana_catch.wav" hidden></audio>
   <script>
     (() => {
       const music = document.getElementById('travel-bgm');
       const typeSounds = [1, 2, 3].map((index) =>
         document.getElementById(`travel-type-${index}`)
+      );
+      const bananaSounds = [1, 2, 3, 4].map((index) =>
+        document.getElementById(`travel-banana-${index}`)
       );
       let unlocked = false;
 
@@ -79,10 +86,15 @@
           });
           safePlay(sound);
         });
+        bananaSounds.forEach((sound) => {
+          sound.currentTime = 0;
+          sound.volume = 0.01;
+          safePlay(sound);
+        });
         safePlay(music);
       };
 
-      ['pointerdown', 'touchstart', 'click', 'keydown'].forEach((eventName) => {
+      ['click', 'keydown'].forEach((eventName) => {
         document.addEventListener(eventName, unlockAudio, {
           capture: true,
           passive: true,
